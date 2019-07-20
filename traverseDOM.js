@@ -10,10 +10,11 @@
  */
 function traverseDOM(element, callback) {
 
-    if (element) {
-        callback(element);
+    if (!element) {
+        return;
     }
 
+    callback(element);
     element = element.firstElementChild;
 
     while (element) {
